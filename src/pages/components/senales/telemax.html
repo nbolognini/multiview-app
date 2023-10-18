@@ -1,0 +1,71 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<meta http-equiv="X-UA-Compatible" content="IE=edge">
+	<meta name="viewport" content="width=device-width, initial-scale=1.0">
+	<link href="https://fonts.googleapis.com/css2?family=Roboto:wght@400;700&display=swap" rel="stylesheet">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+
+	<title>Monitoreo señales Streaming</title>
+	<link rel="stylesheet" href="../estilos.css">
+
+	<!--   scripts JS offline local    -->
+	<script src="../scripts/hls.js"></script>
+	<script src="../scripts/hlsPlayer.js"></script>
+</head>
+
+<body>
+	<div class="contenedor">	
+		<div class="menu" style="background-image: url('../img/2.jpg')">
+			<h3>MultiView Telecentro</h3>
+			<ul>
+				<li>_________</li>
+				<a href="canal26.html" style="color:#FBFCFC">Canal26</a>
+				<li></li>
+				<a href="telemax.html" style="color:#FBFCFC">Telemax</a>
+				<li></li>
+				<a href="musictop.html" style="color:#FBFCFC">Musictop</a>
+				<li></li>
+				<a href="tierramia.html" style="color:#FBFCFC">TierraMia</a>
+				<li></li>
+				<a href="tlcpreview.html" style="color:#FBFCFC">TlcPreview</a>
+				<li>Canal 4K</li>
+				<li>LatinaTv</li>
+				<li>_________</li>
+				<a href="../index.html" style="color:#FBFCFC">HLS Nebula</a>
+				<li>RTMP Test</li>
+
+			</ul>
+			<button class="boton">Reproducir Todo</button>
+		</div>		
+
+		<div class="contenedor-señales">
+			<div class="card" style="background-image: url('../img/telemax.jpg')">
+				<div class="textos">
+					<h3>Telemax</h3>
+					<p>HLS (nebula)</p>
+					  <video id="telemax" width="264" height="198" autoplay muted controls></video>
+				</div>
+			</div>
+
+			<div class="card" style="background-image: url('../img/telemax.jpg')">
+				<div class="textos">
+					<h3>Telemax</h3>
+					<p>HLS (wowza)</p>
+					<video id="telemax-w" width="264" height="198" autoplay muted controls></video>
+				</div>
+			</div>
+
+		</div>
+	</div>
+	
+	<script>
+	//Señales HLS del Nebula
+    	setupHlsPlayer('telemax', 'https://stream-gtlc.telecentro.net.ar/hls/telemaxhls/main.m3u8');
+	//Señales HLS del Wowza 
+	setupHlsPlayer('telemax-w', 'https://live-edge01.telecentro.net.ar/live/smil:tlx.smil/playlist.m3u8');
+	</script>
+</body>
+</html>

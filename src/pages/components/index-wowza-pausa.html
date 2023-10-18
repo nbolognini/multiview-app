@@ -1,0 +1,114 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<meta http-equiv="X-UA-Compatible" content="IE=edge">
+	<meta name="viewport" content="width=device-width, initial-scale=1.0">
+	<link href="https://fonts.googleapis.com/css2?family=Roboto:wght@400;700&display=swap" rel="stylesheet">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+
+	<title>MultiView Telecentro</title>
+	<link rel="stylesheet" href="estilos.css">
+
+	<!--   scripts JS offline local    -->
+	<script src="scripts/hls.js"></script>
+	<script src="scripts/hlsPlayer.js"></script>
+</head>
+
+<body>
+	<div class="contenedor">	
+		<div class="menu" style="background-image: url('./img/2.jpg')">
+			<h3>MultiView Telecentro</h3>
+			<ul>
+				<li>_________</li>
+				<a href="senales/canal26.html" style="color:#FBFCFC">Canal26</a>
+				<li></li>
+				<a href="senales/telemax.html" style="color:#FBFCFC">Telemax</a>
+				<li></li>
+				<a href="senales/musictop.html" style="color:#FBFCFC">Musictop</a>
+				<li></li>
+				<a href="senales/tierramia.html" style="color:#FBFCFC">TierraMia</a>
+				<li></li>
+				<a href="senales/tlcpreview.html" style="color:#FBFCFC">TlcPreview</a>
+				<li>Canal 4K</li>
+				<li></li>
+                                <a href="senales/latina.html" style="color:#FBFCFC">LatinaTv</a>
+				<li>_________</li>
+
+				<a href="index.html" style="color:#FBFCFC">HLS Nebula</a>
+				<li>RTMP Test</li>
+			</ul>
+			<button class="boton"><a href="index-wowza.html" style="color:#FBFCFC">Reproducir Todo</a></button>
+		</div>		
+
+		<div class="contenedor-señales">
+			<div class="card" style="background-image: url('./img/canal26.jpg')">
+				<div class="textos">
+					<h3>Canal26</h3>
+					<p>rtmp</p>
+					<iframe width="264" height="198" src="https://www.youtube.com/embed/2IfTdw28WFY" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" allowfullscreen></iframe>
+				</div>
+			</div>
+
+			<div class="card" style="background-image: url('./img/3.jpg')">
+				<div class="textos">
+
+				</div>
+			</div>
+
+			<div class="card" style="background-image: url('./img/3.jpg')">
+				<div class="textos">
+
+				</div>
+			</div>
+
+			<div class="card" style="background-image: url('./img/telemax.jpg')">
+				<div class="textos">
+					<h3>Telemax</h3>
+					<p>HLS (wowza)</p>
+					<video id="telemax-w" width="264" height="198" autostart="0" muted controls></video>
+				</div>
+			</div>
+
+			<div class="card" style="background-image: url('./img/musictop.jpg')">
+				<div class="textos">
+					<h3>MusicTop</h3>
+					<p>HLS (wowza)</p>
+					  <video id="musictop-w" width="264" height="198" autostart="0" muted controls></video>
+				</div>
+			</div>
+
+			<div class="card" style="background-image: url('./img/tierramia.jpg')">
+				<div class="textos">
+					<h3>TierraMia</h3>
+					<p>HLS (wowza)</p>
+					<video id="tierramia-w" width="264" height="198" autostart="0" muted controls></video>
+				</div>
+			</div>
+
+			<div class="card" style="background-image: url('./img/latinatv.jpg')">
+				<div class="textos">
+				<h3>LatinaTv</h3>
+                                <p>HLS (wowza)</p>
+				<video id="latinatv-w" width="264" height="198" autostart="0" muted controls></video>
+				</div>
+			</div>
+
+			<div class="card" style="background-image: url('./img/3.jpg')">
+				<div class="textos">
+				</div>
+			</div>
+		</div>
+	</div>
+	
+	<script>
+	//Señales HLS de Wowza 
+		setupHlsPlayer('telemax-w', 'https://live-edge01.telecentro.net.ar/live/smil:tlx.smil/playlist.m3u8');
+		setupHlsPlayer('musictop-w', 'https://live-edge01.telecentro.net.ar/live/smil:musictop.smil/playlist.m3u8');
+		setupHlsPlayer('tierramia-w', 'https://live-edge01.telecentro.net.ar/live/smil:trm.smil/playlist.m3u8');
+		setupHlsPlayer('latinatv-w', 'https://live-edge01.telecentro.net.ar/live/smil:rltn.smil/playlist.m3u8');
+	</script>
+
+</body>
+</html>

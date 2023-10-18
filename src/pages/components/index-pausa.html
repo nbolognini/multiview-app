@@ -1,0 +1,126 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<meta http-equiv="X-UA-Compatible" content="IE=edge">
+	<meta name="viewport" content="width=device-width, initial-scale=1.0">
+	<link href="https://fonts.googleapis.com/css2?family=Roboto:wght@400;700&display=swap" rel="stylesheet">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+
+	<title>MultiView Señales del Grupo</title>
+	<link rel="stylesheet" href="estilos.css">
+
+	<!--   scripts JS offline local    -->
+	<script src="scripts/hls.js"></script>
+	<script src="scripts/hlsPlayer.js"></script>
+</head>
+
+<body>
+	<div class="contenedor">	
+		<div class="menu" style="background-image: url('./img/2.jpg')">
+			<h3>MultiView Telecentro</h3>
+			<ul>
+				<li>_________</li>
+				<a href="senales/canal26.html" style="color:#FBFCFC">Canal26</a>
+				<li></li>
+				<a href="senales/telemax.html" style="color:#FBFCFC">Telemax</a>
+				<li></li>
+				<a href="senales/musictop.html" style="color:#FBFCFC">Musictop</a>
+				<li></li>
+				<a href="senales/tierramia.html" style="color:#FBFCFC">TierraMia</a>
+				<li></li>
+				<a href="senales/tlcpreview.html" style="color:#FBFCFC">TlcPreview</a>
+				<li>Canal 4K</li>
+				<li></li>
+				<a href="senales/latina.html" style="color:#FBFCFC">LatinaTv</a>
+				<li>_________</li>
+				<a href="index-wowza.html" style="color:#FBFCFC">HLS wowza</a>
+				<li>RTMP Test</li>
+
+			</ul>
+			<button class="boton"><a href="index.html" style="color:#FBFCFC">Reproducir Todo</a></button>
+		</div>		
+
+		<div class="contenedor-señales">
+
+			<div class="card" style="background-image: url('./img/canal26.jpg')">
+				<div class="textos">
+					<h3>Canal26</h3>
+					<p>rtmp</p>
+					<iframe width="264" height="198" src="https://www.youtube.com/embed/2IfTdw28WFY" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" allowfullscreen></iframe>
+				</div>
+			</div>
+
+			<div class="card" style="background-image: url('./img/canal26.jpg')">
+				<div class="textos">
+					<h3>Canal26</h3>
+					<p>HLS</p>
+					<video id="canal26" width="264" height="198" autostart="0" muted controls></video>
+				</div>
+			</div>
+
+			<div class="card" style="background-image: url('./img/canal26.jpg')">
+				<div class="textos">
+					<h3>Canal26 FifaTv</h3>
+					<p>HLS</p>
+					<video id="canal26fifatv" width="264" height="198" autostart="0" muted controls></video>
+				</div>
+			</div>
+
+			<div class="card" style="background-image: url('./img/telemax.jpg')">
+				<div class="textos">
+					<h3>Telemax</h3>
+					<p>HLS</p>
+					<video id="telemax" width="264" height="198" autostart="0" muted controls></video>
+				</div>
+			</div>
+
+			<div class="card" style="background-image: url('./img/musictop.jpg')">
+				<div class="textos">
+					<h3>MusicTop</h3>
+					<p>HLS</p>
+					<video id="musictop" width="264" height="198" autostart="0" muted controls></video>
+				</div>
+			</div>
+
+			<div class="card" style="background-image: url('./img/tierramia.jpg')">
+				<div class="textos">
+					<h3>TierraMia</h3>
+					<p>HLS</p>
+					<video id="tierramia" width="264" height="198" autostart="0" muted controls></video>
+				</div>
+			</div>
+
+			<div class="card" style="background-image: url('./img/latinatv.jpg')">
+				<div class="textos">
+					<h3>LatinaTv</h3>
+					<p>HLS</p>
+					<video id="latinatv" width="264" height="198" autostart="0" muted controls></video>
+                                              <video id="video6" controls></video>
+				</div>
+			</div>
+
+			<div class="card" style="background-image: url('./img/tlcpreview.jpg')">
+				<div class="textos">
+					<h3>TlcPreview</h3>
+					<p>HLS</p>
+					<video id="tlcpreview" width="264" height="198" autostart="0" muted controls></video>
+				</div>
+			</div>
+		</div>
+	</div>
+	
+	<script>
+	//Señales HLS de Nebula
+ 		setupHlsPlayer('canal26', 'https://stream-gtlc.telecentro.net.ar/hls/canal26hls/main.m3u8');
+    	setupHlsPlayer('canal26fifatv', 'https://stream-gtlc.telecentro.net.ar/hls/fifatv/main.m3u8');
+    	setupHlsPlayer('telemax', 'https://stream-gtlc.telecentro.net.ar/hls/telemaxhls/main.m3u8');
+    	setupHlsPlayer('musictop', 'https://stream-gtlc.telecentro.net.ar/hls/musictophls/main.m3u8');
+    	setupHlsPlayer('tierramia', 'https://stream-gtlc.telecentro.net.ar/hls/tierramiahls/main.m3u8');
+    	setupHlsPlayer('tlcpreview', 'https://stream-gtlc.telecentro.net.ar/hls/telecentropreviewhls/main.m3u8');
+    	setupHlsPlayer('latinatv', 'https://stream-gtlc.telecentro.net.ar/hls/radiolatinahls/main.m3u8');
+	</script>
+	
+</body>
+</html>

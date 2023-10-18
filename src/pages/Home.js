@@ -71,7 +71,7 @@ const Home = () =>{
 						LatinaTV
 						<br></br>
 						HLS<br></br><br></br>
-						<ReactPlayer controls muted playing={playing} width="264" height="198"   url='https://stream-gtlc.telecentro.net.ar/hls/radiolatinahls/main.m3u8' />					
+						<ReactPlayer controls muted playing={playing} width="264" height="198"   url='https://stream-gtlc.telecentro.net.ar/hls/latinatvhls/main.m3u8' />					
                     </Titulo>
 				</Senales>
 				<Senales>
